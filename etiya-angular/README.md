@@ -1,3 +1,12 @@
+
+northwind-json-server dosyasını indirip 
+npm install yükleyip sonrasında 
+npm start komutuyla serveri ayaga kaldırıyoruz daha sonrasında 
+projeyi indirip npm install diyip npm yükleyip 
+ng serve --open komutuyla angular uygulamasını ayaga kaldırıyoruz :))
+
+
+
 # EtiyaAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
