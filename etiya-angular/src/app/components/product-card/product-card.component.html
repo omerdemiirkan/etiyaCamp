@@ -1,0 +1,15 @@
+
+
+<div class="card m-" style="width: 18rem;">
+   
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">
+        Price: {{product.unitPrice}} $
+      </p>
+      <p>Stock: {{product.unitsInStock}}</p>
+      <p>Quantity per unit: {{product.quantityPerUnit}}</p>
+      <button (click)="addToCartEvent()"  class="btn btn-primary">Sepete ekle </button>
+    </div>
+  </div>
+
