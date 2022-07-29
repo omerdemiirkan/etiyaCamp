@@ -13,7 +13,10 @@ export class ProductListComponent implements OnInit {
   // productList:any[]=[]
   productList!: any[];
 
-  carItems: any[] = [];
+
+  isProduct:boolean = false;
+
+cartItems: any[] =[];
  
   constructor(private productsService:ProductsService) {
     
@@ -25,17 +28,20 @@ export class ProductListComponent implements OnInit {
     }, 2000);
    
   }
-  getProducts() {
-    this.productsService.getList().subscribe(response=>{
-      this.productList=response
-
+  getProducts(){
+    this.productsService.getList().subscribe((response) =>{
+      this.productList = response;  
+      if(this.productList.length>0) this.isProduct = true;
     })
   }
 
-  addToCart(product: Product) {
-    let itemToFind = this.carItems.find((c) => c == product.name);
+  addToCart(product:Product){
+    let itemToFind = this.cartItems.find((c)=> c == product.name);
     if (!itemToFind) {
-      this.carItems.push(product.name);
+      this.cartItems.push(product.name)
+    }
+    else{
+      console.log("Ürün zaten ekli!!")
     }
   }
   

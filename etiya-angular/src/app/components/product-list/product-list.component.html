@@ -1,19 +1,32 @@
-<p>
-  sepetinizde {{carItems.length}} ürün var 
-</p>
+<p>Sepetinizde {{cartItems.length}} ürün var.</p>
+
 <ng-template [ngIf]="productList" [ngIfElse]="loading">
-  <div class="row">
-      <div class="col-4" *ngFor="let p of productList">
-         <etiya-product-card (onBtnClick)="addToCart($event)" [product]="p"></etiya-product-card>
-      </div>
-  </div>
+    <div *ngIf="isProduct; else emptyProduct">
+    <div class="row">
+            <div class="col-4" *ngFor="let p of productList">
+                <etiya-product-card (onBtnClick)="addToCart($event)" [product]="p"></etiya-product-card>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #emptyProduct>
+    <div class="alert alert-primary" role="alert">
+        There are no products
+    </div>
+</ng-template>
+<ng-template #loading>
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
 </ng-template>
 
-<ng-template #loading>
-  <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-    <div class="alert alert-danger" role="alert">
-      Product is out of stock!
-    </div>
-</ng-template>
+
+
+<!-- <div class="row">
+        <div *ngFor="let p of productList" class="col-4">
+            <etiya-product-card (onBtnClick)="addToCart($event)" [product]="p"></etiya-product-card>
+        </div>
+</div>
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div> -->
