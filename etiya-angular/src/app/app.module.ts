@@ -14,6 +14,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { CategoryComponent } from '../app/components/category/category.component';
 import { RegisterComponent } from '../app/pages/register/register.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { EditCustomerComponent } from './pages/edit-customer/edit-customer.component';
 
 
@@ -35,7 +38,9 @@ import { EditCustomerComponent } from './pages/edit-customer/edit-customer.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
    
   ],
   providers: [],

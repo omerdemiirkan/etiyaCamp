@@ -11,77 +11,49 @@ import { CustomersService } from 'src/app/services/customers/customers.service';
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
-  // companyName= new FormControl("kodlama.io",Validators.required)
+  //companyName = new FormControl('',Validators.required);
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private customerService: CustomersService
-  ) {}
+  constructor(private formBuilder:FormBuilder, private customerServices:CustomersService) { }
 
   ngOnInit(): void {
     this.createRegisterForm();
   }
 
-  createRegisterForm(): void {
+  createRegisterForm(): void{
     this.registerForm = this.formBuilder.group({
       companyName: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
+        '', //default
+        [Validators.required,Validators.minLength(2)] //doğrulama 
       ],
-      contactName: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      contactTitle: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      street: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      city: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      region: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      postalCode: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      country: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      phone: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-      customerKey: [
-        '', //default deger
-        [Validators.required, Validators.minLength(2)], //dogrulama
-      ],
-    });
+      contactName: ['',[Validators.required,Validators.minLength(2)]],
+      contactTitle: ['',[Validators.required,Validators.minLength(2)]],
+      street: ['',Validators.required],
+      city: ['',Validators.required],
+      region: ['',Validators.required],
+      postalCode: ['',Validators.required],
+      country: ['',Validators.required],
+      phone: ['',Validators.required],
+      customerKey: ['',[Validators.required,Validators.minLength(2)]],
+
+    })
+    
+    // this.registerForm = new FormGroup({
+    //   companyName : this.companyName
+    // })
   }
 
-  register() {
-    if (!this.registerForm.valid) {
-      console.warn('Gerekli alanları doldurunuz ');
+  register(){
+    if (this.registerForm.invalid) {
+      console.warn("Gerekli alanları doldurunuz")
       return;
     }
 
-    const customer:Customer={
-     ...this.registerForm.value,
-     city: this.registerForm.value.city.toUpperCase()
+    const customer:Customer = {
+      ...this.registerForm.value,
     }
 
-    this.customerService
-      .add(customer)
-      .subscribe((response) => {
-        console.info(response);
-      });
+    this.customerServices.add(customer).subscribe(response =>{
+      console.info(response)
+    })
   }
 }
