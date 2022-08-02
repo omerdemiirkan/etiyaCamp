@@ -6,7 +6,7 @@ import { CustomersService } from 'src/app/services/customers/customers.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
@@ -56,4 +56,5 @@ export class RegisterComponent implements OnInit {
       console.info(response)
     })
   }
+
 }

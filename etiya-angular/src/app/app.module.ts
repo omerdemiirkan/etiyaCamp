@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from '../app/app-routing.module';
-import { AppComponent } from '../app/app.component';
-
-import { AddProductComponent } from '../app/pages/add-product/add-product.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductListComponent } from '../app/components/product-list/product-list.component';
-import { HomepageComponent } from '../app/pages/homepage/homepage.component';
-import { NavbarComponent } from '../app/components/navbar/navbar.component';
-import { ProductCardComponent } from '../app/components/product-card/product-card.component';
-import {HttpClientModule} from "@angular/common/http";
-import { CategoryComponent } from '../app/components/category/category.component';
-import { RegisterComponent } from '../app/pages/register/register.component'
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { EditCustomerComponent } from './pages/edit-customer/edit-customer.component';
-
+import { CustomerFormComponent } from './pages/customer-form/customer-form.component';
+import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
+import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +27,12 @@ import { EditCustomerComponent } from './pages/edit-customer/edit-customer.compo
     HomepageComponent,
     NavbarComponent,
     ProductCardComponent,
-    CategoryComponent,
+    CategoryListComponent,
     RegisterComponent,
-    DashboardComponent,
-    EditCustomerComponent
+    CustomerFormComponent,
+    CustomerDashboardComponent,
+    ProductDashboardComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,6 @@ import { EditCustomerComponent } from './pages/edit-customer/edit-customer.compo
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-   
   ],
   providers: [],
   bootstrap: [AppComponent]
