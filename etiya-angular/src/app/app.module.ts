@@ -11,13 +11,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoryListComponent } from './components/category-list/category-list.component';
-import { RegisterComponent } from './pages/register/register.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomerFormComponent } from './pages/customer-form/customer-form.component';
 import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { KdvPipe } from './pipes/kdv/kdv.pipe';
+import { SaleDirective } from './directives/sale/sale.directive';
+import { FilterProductPipe } from './pipes/filterProduct/filter-product.pipe';
+import { ClickProductCardDirective } from './directives/clickProductCard/click-product-card.directive';
 
 @NgModule({
   declarations: [
@@ -28,11 +32,14 @@ import { ProductFormComponent } from './pages/product-form/product-form.componen
     NavbarComponent,
     ProductCardComponent,
     CategoryListComponent,
-    RegisterComponent,
     CustomerFormComponent,
     CustomerDashboardComponent,
     ProductDashboardComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    KdvPipe,
+    SaleDirective,
+    FilterProductPipe,
+    ClickProductCardDirective
   ],
   imports: [
     BrowserModule,

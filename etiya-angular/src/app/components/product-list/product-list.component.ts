@@ -14,7 +14,8 @@ export class ProductListComponent implements OnInit {
 productList!:Product[];
 cartItems: any[] =[];
 //productList! :any[]
-
+filterText:string="";
+today: number = Date.now();
   constructor(private productService:ProductsService) {
     //* Dependency Injection ile Angular otomatik olarak inject eder.
    }
