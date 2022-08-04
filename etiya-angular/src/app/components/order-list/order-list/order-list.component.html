@@ -1,4 +1,22 @@
-<table  class="table table-light table-hover">
+<table  class="table table-dark table-hover">
+    <thead>
+      <tr >
+        <th scope="col">Welcome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *appWelcome="2000; else showWelcomeList">
+        <td colspan="8">Welcome</td>
+      </tr>
+      <ng-template #showWelcomeList>
+        <tr *appMultiple="5">
+          <td colspan="8">Welcome</td>
+        </tr>
+      </ng-template>
+    </tbody>
+</table>
+
+<table  class="table table-dark table-hover">
     <thead>
       <tr >
         <th scope="col">Id</th>
@@ -12,11 +30,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *appWelcome="2000; else showlist">
+      <tr *appWelcome="2000; else showList">
         <td colspan="8">Welcome</td>
       </tr>
-      <ng-template #showlist>
-        <tr *appMultiple="let order of orderList;">
+      <ng-template #showList>
+        <tr *ngFor="let order of orderList;">
           <th scope="row">{{order.id}}</th>
           <td>{{order.shipName | uppercase}}</td>
           <td>{{order.customerKey}}</td>
@@ -29,5 +47,3 @@
       </ng-template>
     </tbody>
 </table>
-
-

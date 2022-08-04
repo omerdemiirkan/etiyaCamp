@@ -4,7 +4,6 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
   selector: '[appMultiple]'
 })
 export class MultipleDirective {
-
   @Input() appMultipleOf!: Array<any>;
 
   constructor(
@@ -12,15 +11,22 @@ export class MultipleDirective {
     private template: TemplateRef<any>
   ) {}
 
-  ngOnChanges() {
+  @Input() set appMultiple(count : number ){
     this.container.clear();
-
-    for (const input of this.appMultipleOf) {
-      this.container.createEmbeddedView(this.template, {
-        $implicit: input,
-        index: this.appMultipleOf.indexOf(input)
-      });
+    
+    for (let index = 0; index < count; index++) {      
+      this.container.createEmbeddedView(this.template)
     }
   }
 
+  // ngOnChanges() {
+  //   this.container.clear();
+
+  //   for (const input of this.appMultipleOf) {
+  //     this.container.createEmbeddedView(this.template, {
+  //       $implicit: input,
+  //       index: this.appMultipleOf.indexOf(input)
+  //     });
+  //   }
+  // }
 }
