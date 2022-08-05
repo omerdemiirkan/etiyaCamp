@@ -13,7 +13,6 @@ export class IfNotDirective {
     ) { }
 
   @Input() set ngIfNot(condition:boolean){
-    console.log(condition,this.hasView)
     if(condition === false && !this.hasView){
       this.viewContainerRef.clear();
       this.viewContainerRef.createEmbeddedView(this.templateRef);
@@ -23,4 +22,6 @@ export class IfNotDirective {
       this.viewContainerRef.createEmbeddedView(this.elseTemplateRef);
       this.hasView =false;
     }
-  }}
+  }
+
+}

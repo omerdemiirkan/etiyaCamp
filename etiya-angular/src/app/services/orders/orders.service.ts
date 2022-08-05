@@ -8,13 +8,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class OrdersService {
+  
+  apiControllerUrl: string = `${environment.apiUrl}/orders` //property
 
-  apiControllerUrl:string = `${environment.apiUrl}/orders`;
+  constructor(private httpClient:HttpClient) { }
 
-  constructor(private httpClient:HttpClient) { } //http client'ı injecte etmeliyiz
-
-  getList(): Observable<Order[]> {
-    // subscribe yapmalıyım çünkü gelen cevabı beklemeliyim asenkron çalıştığı için
-    return this.httpClient.get<Order[]>(`${this.apiControllerUrl}`);
+  getList(): Observable<Order[]>{
+    return this.httpClient.get<Order[]>(this.apiControllerUrl);
   }
+
 }

@@ -4,40 +4,41 @@ import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@
   selector: '[appOnSale]'
 })
 export class SaleDirective implements OnInit {
+  @Input() onSaleColor:string = 'red'
+  @Input() onSaleText:string = 'On Sale!'
+  @Input() isOnSale:boolean = true;
 
-  @Input() onSaleColor:string="yellow"
-  @Input() onSaleText:string="On Sale"
-  @Input() inOnSale:boolean=true
-
-  constructor(private elementRef:ElementRef, private renderer:Renderer2) {
-    
+  constructor(private elementRef:ElementRef, private renderer:Renderer2) { 
   }
 
-  ngOnInit():void{
-    if(!this.inOnSale) return
-    this.changeBackgroundColor("green")
-    this.addSaleText()
-   
-  }
-  
-  @HostListener("mouseenter") onMouseEnter(){
-    if(!this.inOnSale) return
-    this.changeBackgroundColor(this.onSaleColor)
-    
+  ngOnInit(): void {
+    if(!this.isOnSale) return;
+    this.changeBackgroungColor('green');
+    this.addSaleText();
   }
 
-  @HostListener("mouseleave") onMouseLeave(){
-    if(!this.inOnSale) return
-    this.changeBackgroundColor("green")
+  @HostListener('mouseenter') onMouseEnter(){
+    if(!this.isOnSale) return;
+    this.changeBackgroungColor(this.onSaleColor);
+
   }
 
-  changeBackgroundColor(color:string){
-    this.elementRef.nativeElement.style.backgroundColor=color
+  @HostListener('mouseleave') onMouseLeave(){
+    if(!this.isOnSale) return;
+    this.changeBackgroungColor('green')
+
   }
+
+  changeBackgroungColor(color:string){
+    this.elementRef.nativeElement.style.backgroundColor = color;
+  }
+
   addSaleText(){
-    const saleTextElement:HTMLElement=this.renderer.createElement("span")
-    saleTextElement.innerText=this.onSaleText
+    const saletTextElement : HTMLElement = this.renderer.createElement('span');
+    saletTextElement.innerText = this.onSaleText;
+    //saleTextElement = <span>İndirim!!!<span>
 
-    this.renderer.appendChild(this.elementRef.nativeElement,saleTextElement)
+    this.renderer.appendChild(this.elementRef.nativeElement,saletTextElement);
   }
+
 }

@@ -10,7 +10,6 @@ import { CategoriesService } from 'src/app/services/categories/categories.servic
 export class CategoryListComponent implements OnInit {
   categoryList!:Category[];
 
-
   constructor(private categoriesService:CategoriesService) { }
 
   ngOnInit(): void {
