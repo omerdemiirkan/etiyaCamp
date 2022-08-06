@@ -16,6 +16,7 @@ import { CustomersModule } from './features/customers/customers.module';
 import { OrdersModule } from './features/orders/orders.module';
 import { SuppliersModule } from './features/suppliers/suppliers.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,     
@@ -36,6 +37,7 @@ import { SuppliersModule } from './features/suppliers/suppliers.module';
     CustomersModule,
     OrdersModule,
     SuppliersModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

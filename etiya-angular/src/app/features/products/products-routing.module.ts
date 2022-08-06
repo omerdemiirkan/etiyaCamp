@@ -8,7 +8,7 @@ import { ProductFormComponent } from './pages/product-form/product-form.componen
 const routes: Routes = [
 {path:"add-product",component:AddProductComponent, canActivate:[LoginGuard]},
 {path: 'add-product', component:AddProductComponent},
-{path: 'dashboard/product/add',component:ProductFormComponent },
+{path: 'dashboard/product/add',component:ProductFormComponent,canActivate:[LoginGuard] },
 {path: 'dashboard/products',component:ProductDashboardComponent },
 {path: 'dashboard/product/:id',component:ProductFormComponent },];
 

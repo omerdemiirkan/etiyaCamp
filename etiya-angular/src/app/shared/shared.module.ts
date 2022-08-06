@@ -6,6 +6,8 @@ import { CategoriesModule } from '../features/categories/categories.module';
 import { ProductsModule } from '../features/products/products.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedRoutingModule } from './shared-routing.module';
+import { CartSummaryComponent } from '../features/cart/components/cart-summary/cart-summary.component';
+import { CartModule } from '../features/cart/cart.module';
 
 
 
@@ -13,6 +15,7 @@ import { SharedRoutingModule } from './shared-routing.module';
   declarations: [ 
     NavbarComponent,    
     HomepageComponent,
+ 
   ],
   imports: [
     CommonModule,
@@ -20,6 +23,7 @@ import { SharedRoutingModule } from './shared-routing.module';
     CategoriesModule,
     ProductsModule,
     BrowserModule,
+    CartModule
   ],
   exports:[NavbarComponent]
 })

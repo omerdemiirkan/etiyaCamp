@@ -4,21 +4,29 @@ import { AuthService } from 'src/app/core/auth/services/auth.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-
   //today: number = Date.now();
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
+   
   }
 
-  testAuth(){
-    this.authService.test().subscribe(response =>{
-      console.log(response)
-    })
+  testAuth() {
+    this.authService.test().subscribe((response) => {
+      console.log(response);
+    });
   }
+  
+  logOut() {
+    this.authService.logOut();
+  }
+
+  isLoggedIn(): boolean {
+   return this.authService.isAuthhenticated
+}
 
 }
