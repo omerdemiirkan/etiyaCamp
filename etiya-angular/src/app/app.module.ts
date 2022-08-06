@@ -4,9 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomepageComponent } from './shared/pages/homepage/homepage.component';
 import {HttpClientModule} from '@angular/common/http';
-import { RegisterComponent } from './pages/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -21,7 +19,7 @@ import { SuppliersModule } from './features/suppliers/suppliers.module';
 @NgModule({
   declarations: [
     AppComponent,     
-    RegisterComponent,  
+ 
   ],
   imports: [
     BrowserModule,
