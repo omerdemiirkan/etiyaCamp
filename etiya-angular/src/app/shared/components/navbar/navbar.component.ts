@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TokenUserModel } from 'src/app/core/auth/models/tokenUserModel';
 import { AuthService } from 'src/app/core/auth/services/auth.service';
 
 @Component({
@@ -9,7 +11,13 @@ import { AuthService } from 'src/app/core/auth/services/auth.service';
 export class NavbarComponent implements OnInit {
   //today: number = Date.now();
 
-  constructor(private authService: AuthService) {}
+
+  tokenUserModel$!:Observable<TokenUserModel | undefined>
+
+
+  constructor(private authService: AuthService) {
+    this.tokenUserModel$=this.authService.tokenUserModel$
+  }
 
   ngOnInit(): void {
    

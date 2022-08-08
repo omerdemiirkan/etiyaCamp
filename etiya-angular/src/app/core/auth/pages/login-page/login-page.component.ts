@@ -28,22 +28,26 @@ export class LoginPageComponent implements OnInit {
   }
   
   login(){
+   
     const userForLoginModel: UserForLoginModel = {
       // userName: this.loginForm.get('userName')!.value,  //null değer olabilir bu yüzden ünlem koyduk
       // password: this.loginForm.get('password')!.value
 
       ...this.loginForm.value
-
+   
+      
     }
+   
     this.authService.login(userForLoginModel).subscribe(response =>{
-      this.authService.saveAuth(response);
-      this.toastrService.success('Login success')
-      this.router.navigateByUrl('')
-
-
+     
+    
+        this.authService.saveAuth(response);
+        this.toastrService.success('Login success')
+        this.router.navigateByUrl('')
+     
       console.log(this.authService.isAuthhenticated)
     })
-      
+   
   }
 
 }

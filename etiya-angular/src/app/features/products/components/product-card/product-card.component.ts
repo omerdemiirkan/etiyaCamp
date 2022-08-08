@@ -31,4 +31,5 @@ export class ProductCardComponent implements OnInit {
     this.cartSummaryService.CartItems = {product:this.product,quantity:1}
   }
 
+
 }
