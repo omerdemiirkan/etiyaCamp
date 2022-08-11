@@ -1,3 +1,8 @@
+env exp dosyasının kopyasını oluşturup .env olarak kaydedip key kısmına istediğiniz bir deger girip npm i yaptıktan sonra npm start ile yayına alabilirsiniz 
+
+
+
+
 <p align="center">
   <a href="https://github.com/ahmet-cetinkaya-other/kodlamaio-etiya-telco-json-server">🗄️</a>
   <h3 align="center">Kodlamaio Etiya Telco Json Server</h3>
