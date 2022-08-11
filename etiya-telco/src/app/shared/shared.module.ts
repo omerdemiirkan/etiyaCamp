@@ -6,21 +6,26 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FooterComponent } from './components/footer/footer.component';
+import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { FeaturesModule } from '../features/features.module';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardLayoutComponent,
+    MainLayoutComponent
   ],
   imports: [
     CommonModule,
     MenubarModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
 
   ],
-  exports:[NavbarComponent,FooterComponent]
+  exports:[NavbarComponent,FooterComponent,DashboardLayoutComponent,MainLayoutComponent]
 })
 export class SharedModule { }

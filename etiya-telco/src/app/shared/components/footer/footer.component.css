@@ -3,7 +3,7 @@
 
 section .section-title {
     text-align: center;
-    color: #3592ee;
+    color: #014d9a;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
@@ -11,7 +11,7 @@ section .section-title {
     position: relative;
     bottom: 0px;
   
-    background: #3592ee !important;
+    background: #014d9a !important;
     width: 100%;
     margin-top: 20px;
 }

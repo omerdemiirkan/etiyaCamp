@@ -7,18 +7,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ToolbarModule} from 'primeng/toolbar';
 import { ServicesRoutingModule } from './services-routing.module';
-import { ServiceListComponent } from './components/service-list/service-list.component';
 import { ServiceFormComponent } from './components/service-form/service-form.component';
-
-
-
-
-
+import { ServiceDashboardComponent } from './components/service-dashboard/service-dashboard.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
-    ServiceListComponent,
-    ServiceFormComponent
+    ServiceFormComponent,
+    ServiceDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +27,10 @@ import { ServiceFormComponent } from './components/service-form/service-form.com
     ToolbarModule,
     ReactiveFormsModule,
     FormsModule,
+    SharedModule
    
-  ]
+  ],
+  exports:[ServiceDashboardComponent,
+    ServiceFormComponent,]
 })
 export class ServicesModule { }
