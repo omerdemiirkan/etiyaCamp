@@ -11,6 +11,7 @@ import { ServicesService } from '../../services/services.service';
   styleUrls: ['./service-form.component.css']
 })
 export class ServiceFormComponent implements OnInit {
+
   serviceForm! : FormGroup;
   service!:Service;   
   
@@ -83,4 +84,5 @@ export class ServiceFormComponent implements OnInit {
       }, 1000);
     })
   }
+
 }

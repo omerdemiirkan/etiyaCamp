@@ -7,6 +7,7 @@ import { HomepageComponent } from './common/pages/homepage/homepage.component';
 import { SharedModule } from '../shared/shared.module';
 
 
+
 @NgModule({
   declarations: [
     HomepageComponent
@@ -15,9 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     FeaturesRoutingModule,
     ServicesModule,
-    SharedModule,
-    
-  ],
-
+    SharedModule
+  ]
 })
 export class FeaturesModule { }

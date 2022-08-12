@@ -4,10 +4,10 @@ import { ServiceDashboardComponent } from './components/service-dashboard/servic
 import { ServiceFormComponent } from './components/service-form/service-form.component';
 
 const routes: Routes = [
-  {path:"",component:ServiceDashboardComponent},
-  {path:"services",component:ServiceDashboardComponent},  
-  {path:"service/add",component:ServiceFormComponent},
-  {path:"service/:id",component:ServiceFormComponent},
+  
+  {path:'services',component:ServiceDashboardComponent},
+  {path:'service/add',component:ServiceFormComponent},
+  {path:'service/:id',component:ServiceFormComponent},
 
 ];
 

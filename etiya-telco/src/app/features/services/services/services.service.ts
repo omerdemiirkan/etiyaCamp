@@ -1,4 +1,4 @@
-import {  HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -9,32 +9,28 @@ import { Service } from '../models/service';
 })
 export class ServicesService {
 
-  apiControllerUrl:string=`${environment.apiUrl}/services`
+  apiControllerUrl:string = `${environment.apiUrl}/services`
 
-  constructor(private http:HttpClient) { }
-
+  constructor(private httpClient:HttpClient) { }
 
   getAll():Observable<Service[]>{
-    
-    return this.http.get<Service[]>(this.apiControllerUrl)
+
+    return this.httpClient.get<Service[]>(this.apiControllerUrl)
   }
-  
 
   getById(id:number):Observable<Service>{
-    return this.http.get<Service>(`${this.apiControllerUrl}/${id}`)
+    return this.httpClient.get<Service>(`${this.apiControllerUrl}/${id}`)
   }
 
-  add(Service:Service): Observable<Service>{
-    return this.http.post<Service>(this.apiControllerUrl,Service);
-  }
+  add(service:Service): Observable<Service>{
+    return this.httpClient.post<Service>(this.apiControllerUrl,service);
+   }
 
   delete(id:number):Observable<Service>{
-    return this.http.delete<Service>(`${this.apiControllerUrl}/${id}`)
+    return this.httpClient.delete<Service>(`${this.apiControllerUrl}/${id}`)
   }
 
-  update(Service:Service):Observable<Service>{
-    return this.http.put<Service>(`${this.apiControllerUrl}/${Service.id}`,Service)
+  update(service:Service):Observable<Service>{
+    return this.httpClient.put<Service>(`${this.apiControllerUrl}/${service.id}`,service)
   }
-
-
 }
