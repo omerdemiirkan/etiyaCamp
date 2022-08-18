@@ -1,5 +1,20 @@
 # EtiyaTelco
 
+Veritabanını kurmak için env expample olan dosyayı .env dosyası olarak kaydederek içerisinde ki key bilgisi istediğiniz bir şey yapıp npm i yapın ve daha da sonrasında 
+npm start diyerek ayaga kaldırabilirsiniz
+
+projeyi indirdikten sonra da npm i diyerek ilgili dosyaları indirip ng serve --open komutuyla da projeyi başlatabilirsiniz 
+
+![7](https://user-images.githubusercontent.com/63349869/185476934-0da3799f-e6a4-40b1-bf3a-eb7d1a74fc81.png)
+![4](https://user-images.githubusercontent.com/63349869/185476910-746dd5b0-5bf6-443b-b033-b8ba7d7d6208.png)
+![5](https://user-images.githubusercontent.com/63349869/185476917-d7bc23e1-3f8f-45fa-a391-e4852b8861c5.png)
+![6](https://user-images.githubusercontent.com/63349869/185476927-b5a21405-a097-43fe-bb7a-ede53e443a8d.png)
+![1](https://user-images.githubusercontent.com/63349869/185476946-b08be77f-9fa1-4628-90f5-f1e23b3ea360.png)
+![3](https://user-images.githubusercontent.com/63349869/185477334-c9ed5daa-6472-445a-adff-60b1aea872da.png)
+![2](https://user-images.githubusercontent.com/63349869/185477322-07020a8e-4cb0-430a-b108-c23e12c3b570.png)
+
+
+
 ## Project Programming Languages
 
 <br>
