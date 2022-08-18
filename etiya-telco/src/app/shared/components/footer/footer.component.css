@@ -3,22 +3,14 @@
 
 section .section-title {
     text-align: center;
-<<<<<<< HEAD
     color: #C2BFB0;
-=======
-    color: #210B2C;
->>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 #footer {
     position: relative;
     bottom: 0;
-<<<<<<< HEAD
     background: #01194D !important;
-=======
-    background: #210B2C !important;
->>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
     width: 100%;
     margin-top: 30px;
 }

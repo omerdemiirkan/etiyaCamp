@@ -29,11 +29,7 @@ export class LoginComponent implements OnInit {
       console.log(response, new Date().toISOString());      
         this.authService.saveToken(response);
         setTimeout(() => {
-<<<<<<< HEAD
           this.router.navigateByUrl('')
-=======
-          this.router.navigateByUrl('homepage')
->>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
         }, 1000);
        
       
