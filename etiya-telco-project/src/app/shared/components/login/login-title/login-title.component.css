@@ -1,0 +1,19 @@
+.general-title {
+
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 41px;
+    letter-spacing: 0.38em;
+
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    margin-top: 20px;
+    background-color: #F58220;
+    border: 1px solid #F58220;
+}
