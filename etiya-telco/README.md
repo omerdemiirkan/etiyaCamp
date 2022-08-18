@@ -1,6 +1,19 @@
 # EtiyaTelco
 
+## Project Programming Languages
+
+<br>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+<br>
+
+![](src/assets/screenshots/ss_service_dashboard.png)
+<br><br>
+![](src/assets/screenshots/ss_skeleton.png)
+<br><br>
+![](src/assets/screenshots/ss_service_form.png)
+<br><br>
+![](src/assets/screenshots/ss_login.png)
 
 ## Development server
 

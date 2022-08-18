@@ -1,0 +1,37 @@
+nav{
+<<<<<<< HEAD
+    background-color: #01194D;
+=======
+    background-color:#210B2C;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    height: 80px;
+}
+
+.d-flex .btn-light:hover{
+    background-color: #f5821f;
+<<<<<<< HEAD
+    color: #C2BFB0;
+=======
+    color:white;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    border-color: #f5821f;
+}
+
+.d-flex .btn-light{
+    background-color: transparent;
+<<<<<<< HEAD
+   
+=======
+    color:#f5821f;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    border-color: #f5821f;
+    margin-left: 10px;
+}
+
+.d-flex .btn-outline-light{
+    margin-right: 10px;
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3

@@ -1,0 +1,145 @@
+.card{
+<<<<<<< HEAD
+    background-color: #8EAD15 !important;
+=======
+    background-color: #55286F !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    width:100%;
+    padding:20px
+}
+
+tr th{
+<<<<<<< HEAD
+    background-color: #50610C !important;
+=======
+    background-color: #55286F !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    color:white
+}
+
+tr td{
+<<<<<<< HEAD
+    background-color: #50610C !important;
+=======
+    background-color: #55286F !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    color:white
+
+}
+
+.summary{
+<<<<<<< HEAD
+    background-color: #50610C!important;
+=======
+    background-color: #55286F !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    color:white
+}
+
+.m-4{
+<<<<<<< HEAD
+    background-color: #50610C!important;
+=======
+    background-color: #55286F !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    color:white
+}
+
+::ng-deep .p-paginator {    
+<<<<<<< HEAD
+        background: #8EAD15  !important;
+=======
+        background: #A855F7  !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    
+}
+
+::ng-deep .p-datatable .p-datatable-footer{
+<<<<<<< HEAD
+    background: #50610C   !important;
+=======
+    background: #f59e0b  !important;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    color: white;
+}
+
+::ng-deep .p-toolbar{
+<<<<<<< HEAD
+    background: #50610C!important;
+    color: white;
+    border-color: #a1f755;
+=======
+    background: #A855F7 !important;
+    color: white;
+    border-color: #A855F7;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+}
+
+::ng-deep .p-paginator .p-paginator-current{
+    color: white;
+}
+
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+    color:white!important;
+<<<<<<< HEAD
+    background: #50610C ;
+=======
+    background: #55286F;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+}
+
+::ng-deep .p-paginator .p-paginator-next{
+    color: white;
+}
+::ng-deep .p-paginator .p-paginator-prev{
+    color: white;
+}
+::ng-deep .p-paginator .p-paginator-first{
+    color: white;
+}
+::ng-deep .p-paginator .p-paginator-last{
+    color: white;
+}
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page{
+    color: white;
+}
+
+::ng-deep .p-dropdown{
+    color: white !important;
+<<<<<<< HEAD
+    background: #50610C ;
+=======
+    background: #55286F;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+}
+
+::ng-deep .p-dropdown .p-dropdown-label{
+    color: white !important;
+}
+
+::ng-deep .p-dropdown .p-dropdown-trigger-icon{
+    color: white !important;
+}
+
+.mc:hover{
+<<<<<<< HEAD
+    background-color: #cafc00 !important;
+    color:black;
+    border-color: #cafc00 ;
+}
+
+.mc{
+    background-color:  #7e9523;
+=======
+    background-color: #f5821f;
+    color:white;
+    border-color: #f5821f;
+}
+
+.mc{
+    background-color: transparent;
+>>>>>>> ae70c223006d8c8ec9d6c55612b160dd9b2256d3
+    color:white;
+    border-color: white;
+    margin-left: 10px;
+}
