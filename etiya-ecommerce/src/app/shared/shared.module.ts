@@ -5,6 +5,10 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import {SkeletonModule} from 'primeng/skeleton';
 import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.component';
+import { CoreModule } from '../core/core.module';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
+import { DashboardHomeComponent } from './pages/dashboard-home/dashboard-home.component';
 
 
 
@@ -13,17 +17,20 @@ import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.
     NavbarComponent,
     MainLayoutComponent,
     DashboardLayoutComponent,    
-    CardSkeletonComponent
+    CardSkeletonComponent, FooterComponent, DashboardHomeComponent
   ],
   imports: [
     CommonModule,
-    SkeletonModule
+    SkeletonModule,
+    CoreModule,
+    RouterModule
     
   ],
   exports:[
     NavbarComponent,
     MainLayoutComponent,
     DashboardLayoutComponent,
-    CardSkeletonComponent]
+    CardSkeletonComponent,
+    FooterComponent]
 })
 export class SharedModule { }
